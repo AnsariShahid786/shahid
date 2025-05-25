@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Task Management Board</h1>
+
+  <label task-container>task-container:</label>
+<input type="range" id="volume" name="task-container" min="0" max="100" value="50">
+
+
+  <div id="board">
+    <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>To Do</h2>
+      <div class="task-container" id="todo-tasks"></div>
+      <button onclick="addTask('todo')">Add Task</button>
+
+
+
+
+    </div>
+
+    <div class="column" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>In Progress</h2>
+      <div class="task-container" id="inprogress-tasks"></div>
+      <button onclick="addTask('inprogress')">Add Task</button>
+    </div>
+
+    <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>Done</h2>
+      <div class="task-container" id="done-tasks"></div>
+      <button onclick="addTask('done')">Add Task</button>
+    </div>
+
+
+
+
+
